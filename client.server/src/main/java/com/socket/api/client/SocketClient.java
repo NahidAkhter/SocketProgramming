@@ -10,8 +10,6 @@ public class SocketClient {
 		int port = 8099;
 
 		Socket socket = new Socket(ip, port);
-
-		//String message = "Zamin";
 		String personJSONData = 
 	            "  {" +
 	            "   \"member\": \"Jack\", " +
@@ -27,7 +25,6 @@ public class SocketClient {
 		System.out.println("Client outputStream Started...");
 
 		PrintWriter out = new PrintWriter(socket.getOutputStream());
-		//out.println(message);
 		out.println(personJSONData);
 		out.flush();
 	}
